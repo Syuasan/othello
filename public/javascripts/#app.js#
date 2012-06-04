@@ -1,0 +1,21 @@
+(function($){
+    window.Odakyu = window.Odakyu || {};
+    window.Odakyu.Othello = window.Odakyu.Othello || {};
+
+    var Othello = window.Odakyu.Othello;
+    Othello.key = 'odakyu_othello';
+    Othello.url = 'http://www40354u.sakura.ne.jp:3000';
+    Othello.authURL = Othello.url + '/auth' 
+
+    if (typeof sessionStorage === 'undefined') {
+        console.log('this browzer cannot use storage.');
+    } else {
+        var storage = localStorage;
+        if (storage.getItem(Othello.key) !== 'undefined') {
+            console.log('storage is undef. try auth');
+            
+        } else {
+            console.log('storage already has key.');
+        }
+    }
+})(jQuery);

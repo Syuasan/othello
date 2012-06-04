@@ -3,6 +3,12 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
+p {
   color: #00B7FF;
+}
+
+canvas#map{
+	width: 90%;
+	padding: 5px;
+	border: solid blue 1px;
 }
