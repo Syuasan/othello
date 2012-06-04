@@ -1,7 +1,22 @@
-!!!
+!!! 5
 html
   head
     title= title
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', href='/stylesheets/bootstrap-responsive.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js')
   body
-    block content
+    block header
+    div.container-fluid
+      div.row-fluid
+        div.span2
+          block player1
+        div.span8
+          block content
+        div.span2
+          block player2
+    script(src='/javascripts/bootstrap.js')
+    script(src='/socket.io/socket.io.js')
+    script(src='/javascripts/app.js')
+    script(src='/javascripts/othello.js')

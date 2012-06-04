@@ -1,5 +1,11 @@
 extends layout
 
-block content
+block header
   h1= title
   p Welcome to #{title}
+block player1
+  h2= p1name
+block player2
+  h2= p2name
+block content
+  canvas#map
